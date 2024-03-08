@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
+body{
+    background: cornsilk;
+    margin: 0px;	
+    z-index: -1;
+  }
+  p{
+    color: #888;
+    font-family: Arial;
+    font-size: 120%;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 50%;
+    margin: 10px 0px;
+    top: 0px;
+    transform: translateX(-50%);
+  }
+          
+  #container, #shell{
+      width: 30%;
+    max-width: 500px;
+      height: 600px;
+      display: block;
+      position: relative;
+      z-index: 10;
+      margin: 50px 0px;
+    cursor: pointer;
+  }
+  #container{
+      width: 100%;
+      transform: rotateX(40deg);
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+  }
+  #shell{
+      left: 50%;
+      perspective: 1400px;
+      transform: translateX(-50%);	
+      transition: all .2s ease;
+    -webkit-transition: all .2s ease;		
+  }
+  .box{
+    width:100%;
+    height: 100%;  
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -webkit-backface-visibility: visible;
+    transform-origin: left;
+    transform-style: preserve-3D;
+    position: absolute;
+    top:0px; 
+    left: 0px;
+  }
+  div#box1{
+    background: url('../imgs/8.3.jpg');
+    background-size: 100% 100%;	
+    transform: rotate3d(0, 1, 0, 0deg);
+    -webkit-backface-visibility: hidden;
+    z-index: 10;
+  }
+  
+  div#box1_back{
+    background: url('../imgs/2.jpg');;
+    /* transform: url('./jpg.jpg'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    transform: scaleX(-1);
+  }
+  
+  div#box2{
+    background: white;	
+    transform: rotate3d(0, 1, 0, 0deg);
+    -webkit-backface-visibility: visible;
+    z-index: -1;
+  }
+  h1{
+    font-family: Agbalumo;
+    font-size: 5em;
+    color: white;
+    margin:0px;
+    position: relative;
+    top: 70%;
+    display: -webkit-box;
+    width: 100%;
+    text-align: center;
+    -webkit-box-pack: center;
+    font-weight: 200;
+    -webkit-user-select: none;
+    user-select: none;
+    background: burlywood;
+  }
+  h6{
+      font-family: 'lobster', cursive;
+      font-size: 150%;
+      color: #C5E1A5;
+      margin:0px;
+      position: relative;
+      top: 60%;
+      display: -webkit-box;
+      width: 100%;
+      text-align: center;
+      -webkit-box-pack: center;
+      font-weight: 200;
+      -webkit-user-select: none;
+      user-select: none;
+    font-size: 3vh;
+  }	
+  
+  @media screen and (max-width: 1000px) {
+    #container, #shell{
+      width: 70%;
+      max-height: 70%;
+      top: 10%;
+    }
+    h1{
+      font-size: 10vh;
+    }
+  }
